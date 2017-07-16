@@ -1,0 +1,38 @@
+<view class="list">
+  <view class="poi" wx:for="{{elements}}" wx:for-item="poi">
+    <image src="{{ poi.img }}" data-id="{{ poi.id}}" data-img="{{ poi.img }}" catchtap="showModal"></image>
+  </view>
+</view>
+<view class="section">
+  <form bindsubmit="bindFormSubmit">
+    <view class="">
+      选择图片:
+      <button bindtap="checkimg">点击选择图片</button>
+    </view>
+    <view class="">
+      <!--<image wx:for="{{imglist}}" mode="aspectFit" bindtap="ylimg" data-src="{{item}}" style="width:75px;height:75px;" src="{{item}}" catchlongtap="showModal"></image>-->
+      <image wx:for="{{imglist}}" mode="aspectFit" bindtap="ylimg" data-src="{{item}}" style="width:75px;height:75px;" src="{{item}}"></image>
+    </view>
+    <button form-type="submit" hidden="{{upload}}"> 上传图片</button>
+  </form>
+</view>
+<view class="drawer_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+<view animation="{{animationData}}" class="drawer_attr_box" wx:if="{{showModalStatus}}">
+  <view class="close_icon" bindtap="hideModal">×</view>
+  <view class="drawer_attr_content">
+    <view class="appointment_title">选项</view>
+
+    <view class="appointment">
+      <button catchtap="imgmax">查看大图</button>
+    </view>
+
+    <view class="appointment">
+      <button catchtap="del">删除图片</button>
+
+    </view>
+
+    <view class="appointment">
+      <button catchtap="inaddimg">更新图片</button>
+    </view>
+  </view>
+</view>

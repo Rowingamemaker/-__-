@@ -1,0 +1,48 @@
+image {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+
+.fanhui {
+  position: absolute;
+  top: -4%;
+  left: 2vw;
+  height: 3vh;
+  width: 4vw;
+  background-color: black;
+}
+
+.img1 {
+  position: absolute;
+  top: 0vh;
+  width: 100vw;
+  height: 60vh;
+  background-color: black;
+}
+
+.classname {
+  width: 100vw;
+  margin: -25vh 0 25vh 0;
+  background-color: white;
+}
+
+page {
+  background-color: black;
+}
+
+.box {
+  position: absolute;
+  top: 0;
+  left: 4vw;
+  height: 6vh;
+  width: 6vw;
+  background-color: black;
+}
+
+.text1{
+    text-align:center;
+    align-items: center;
+    width: 100vw;
+    font-size: 50rpx;
+}

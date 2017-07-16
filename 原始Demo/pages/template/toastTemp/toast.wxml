@@ -1,0 +1,10 @@
+<!--模板路径不需要再app.json中注册-->
+<!--自定义消息提示框-->
+<template name="toastTemp">
+  <view class="toastTemp {{show?'show':''}}">
+    <view class="toast-wrap">
+      <view class="toast-content">{{tip}}</view>
+      <view class="toast-btn" catchtap="hideToast">确定</view>
+    </view>
+  </view>
+</template>

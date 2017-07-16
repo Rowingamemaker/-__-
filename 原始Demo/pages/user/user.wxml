@@ -1,0 +1,6 @@
+<block wx:for="{{array}}">
+  <view class="classname">
+    <text>{{item.name}}</text>
+  </view>
+  <image src="{{item.img}}"></image>
+</block>

@@ -1,0 +1,4 @@
+<!--pages/imgmax/imgmaxs.wxml-->
+<view class="classname">
+  <image style="position: absolute;" mode="aspectFit" src="{{dataimg}}" catchtap="move"></image>
+</view>

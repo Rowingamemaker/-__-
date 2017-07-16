@@ -1,0 +1,19 @@
+<template name="venueItem">
+  <view class="venue-image-box">
+    <image src="{{firstImg}}" class="venue-img"></image>
+  </view>
+  <view class="venue-intro">
+    <text class="venue-title">{{title}}</text>
+    <text class="venue-address">{{source}}</text>
+    <view class="venue-btns">
+      <text class="btn1">停</text>
+      <text class="btn1">退</text>
+      <text class="btn3">会员卡</text>
+    </view>
+    <view class="venue-price">
+      <text class="hui">惠</text>
+      <text class="zhe">全场9折</text>
+      <button class="price" size="mini">29.50</button>
+    </view>
+  </view>
+</template>

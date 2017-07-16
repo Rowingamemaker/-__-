@@ -1,0 +1,59 @@
+<!--hidden="{{!showGallery}}" -->
+<image class="music" bindtap="addwenjian" src="../../images/tianjia.png"></image>
+
+<scroll-view scroll-y="true" style="height:90vh;background-color:lightcyan;position:relative;top:105rpx;">
+  <form bindsubmit="formSubmit" class="firstbox">
+    <view class="srft">
+      <input name="input" style="background-color:gray;margin-top:-21rpx;margin-left:80rpx;width:330rpx;border:2rpx solid yellow;border-radius:8%" />
+      <button formType="submit" style="color:blue;margin-top:-21rpx;font-size:21rpx;height:60rpx;margin-left:100rpx;text-align:top;">搜索</button>
+    </view>
+  </form>
+  <view class="list" wx:if="{{search}}">
+    <view style="margin-left:20rpx;" class="poi" wx:for="{{album}}" wx:for-item="item">
+      <image src="{{ wenjianjia }}" data-id="{{ item.id}}" catchlongtap="del" catchtap="inaddimg"></image>
+      <text>{{item.wenjianjia}}</text>
+      <!--///底部弹出蓝-->
+      <!--<view class="drawer_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+      <view animation="{{animationData}}" class="drawer_attr_box" wx:if="{{showModalStatus}}">
+        <view class="close_icon" bindtap="hideModal">×</view>
+        <view class="drawer_attr_content">
+          <view class="appointment_title">选项</view>
+
+          <view class="appointment">
+            <button>管理图片</button>
+          </view>
+
+          <view class="appointment">
+            <button catchtap="del">删除文件夹</button>
+
+          </view>
+        </view>
+      </view>-->
+      
+    </view>
+  </view>
+  <button class="jiazai">点击加载更多</button>
+</scroll-view>
+<view class="js_dialog" id="androidDialog1" style="opacity: 1;" wx:if="{{wenjian}}">
+  <view class="weui-mask"></view>
+  <view class="weui-dialog weui-skin_android">
+    <view class="weui-dialog__hd"><strong class="weui-dialog__title">创建文件夹</strong> </view>
+    <form bindsubmit="addwenjianjianame" report-submit="true">
+      <view class="weui-dialog__bd">
+        <view class="weui-cells__title">文件名</view>
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__bd">
+              <input class="weui-input" name="wenjianname" placeholder="请输入文件名" />
+            </view>
+          </view>
+        </view>
+
+      </view>
+      <view class="weui-dialog__ft">
+        <view class="weui-dialog__btn weui-dialog__btn_default" bindtap="noneWindows">取消</view>
+        <button loading="{{loading}}" class="weui-dialog__btn weui-dialog__btn_primary" formType="submit">创建</button>
+      </view>
+    </form>
+  </view>
+</view>

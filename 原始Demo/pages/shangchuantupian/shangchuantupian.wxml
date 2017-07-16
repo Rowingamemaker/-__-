@@ -1,0 +1,13 @@
+<view class="section">
+  <form bindsubmit="bindFormSubmit">
+    <view class="">
+      选择更新图片:
+      <button bindtap="checkimg">点击选择图片</button>
+    </view>
+    <view class="">
+      <!--<image wx:for="{{imglist}}" mode="aspectFit" bindtap="ylimg" data-src="{{item}}" style="width:75px;height:75px;" src="{{item}}" catchlongtap="showModal"></image>-->
+      <image wx:for="{{imglist}}" mode="aspectFit" bindtap="ylimg" data-src="{{item}}" style="width:75px;height:75px;" src="{{item}}"></image>
+    </view>
+    <button form-type="submit" hidden="{{upload}}"> 上传图片</button>
+  </form>
+</view>

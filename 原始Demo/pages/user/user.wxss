@@ -1,0 +1,9 @@
+/* pages/user/user.wxss */
+text{
+    width: 100vw;
+    align-items: center;
+    text-align: center;
+}
+image{
+    width: 100vw;
+}

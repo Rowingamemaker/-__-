@@ -1,0 +1,19 @@
+{
+    "pages": [
+        "pages/login/index",
+        "pages/index/index",
+        "pages/user/user",
+        "pages/regist/index",
+        "pages/shangchuantupian/shangchuantupian",
+        "pages/template/toast",
+        "pages/imgcontroller/imgcontroller",
+        "pages/imgmax/imgmaxs",
+        "pages/logs/logs"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": ".",
+        "navigationBarTextStyle": "black"
+    }
+}
